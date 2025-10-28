@@ -68,21 +68,24 @@ const impact = {
 	]
 };
 
-const support = [
-	{
-		title: 'Volunteer',
-		link: '/volunteer',
-		imgSrc: person_standing_axe_chopping,
-		imgAlt: 'Person chopping wood during an outdoor volunteer activity',
-		text: 'Be a part of the team. It can be excellent work experience!'
-	},
-	{
-		title: 'Make a Donation',
-		link: '/donate',
-		imgSrc: chillie_plants_garlic_hanging,
-		imgAlt: 'Close-up of chillies',
-		text: 'Any donation is appreciated!'
-	}
-];
+const supportBirch = {
+	heading: 'Support Us',
+	sections: [
+		{
+			title: 'Volunteer',
+			link: '/volunteer',
+			imgSrc: person_standing_axe_chopping,
+			imgAlt: 'Person chopping wood during an outdoor volunteer activity',
+			text: 'Be a part of the team. It can be excellent work experience!'
+		},
+		{
+			title: 'Make a Donation',
+			link: '/donate',
+			imgSrc: chillie_plants_garlic_hanging,
+			imgAlt: 'Close-up of chillies',
+			text: 'Any donation is appreciated!'
+		}
+	]
+};
 
-export { hero, aboutUs, offer, impact, support, intro };
+export { hero, aboutUs, offer, impact, supportBirch, intro };
