@@ -30,7 +30,7 @@
 				class="absolute bottom-0 left-0 z-10 h-3/4 w-full bg-linear-to-t from-bc-slate-pine to-transparent 3xl:h-2/3"
 			></div>
 
-			<div class="section-x-px absolute bottom-10 z-20 w-full 4xl:bottom-32">
+			<div class="section-px absolute bottom-10 z-20 w-full 4xl:bottom-32">
 				<h1 class="hero-heading">{hero.heading}</h1>
 
 				<div
@@ -49,7 +49,7 @@
 	</section>
 
 	<section class="section-mt flex justify-center">
-		<div class="section-x-px section-container-lg relative">
+		<div class="section-px section-container-lg relative">
 			<div
 				class="absolute top-0 right-0 -z-10 aspect-square w-[80%] max-w-[900px] translate-x-1/2 -translate-y-1/2 rounded-full bg-my-pale-yellow 4xl:max-w-[1000px]"
 			></div>
@@ -91,7 +91,7 @@
 		</div>
 	</section>
 
-	<section class="section-x-px section-mt flex justify-center">
+	<section class="section-px section-mt flex justify-center">
 		<div class="w-full">
 			<h2 class="section-heading-bold text-bc-slate-pine md:text-center">
 				{aboutUs.heading}
@@ -126,16 +126,14 @@
 	</section>
 
 	<section class="section-mt flex justify-center">
-		<div class="section-container-lg section-x-px">
+		<div class="section-container-lg section-px">
 			<div class="relative inline-block flex-col items-start">
 				<h2 class="section-heading-small">{offer.heading}</h2>
 
 				<enhanced:img class="absolute bottom-1 h-0.5 w-full opacity-70" src={drawn_line_black} />
 			</div>
 
-			<div
-				class="mt-8 flex w-full flex-col justify-between gap-x-20 gap-y-16 xl:flex-row 3xl:gap-x-40"
-			>
+			<div class="card-grid-container-lg mt-8 w-full">
 				{#each offer.sections as item}
 					<a
 						class="group/tile relative block focus:ring-2 focus:ring-bc-amber focus:outline-none 3xl:w-[700px] 4xl:w-[850px]"
@@ -175,7 +173,7 @@
 		</div>
 	</section>
 
-	<section class="section-x-px section-mt flex justify-center">
+	<section class="section-px section-mt flex justify-center">
 		<div class="w-full">
 			<h2 class="section-heading-bold text-bc-slate-pine md:text-center">
 				{impact.heading}
@@ -212,7 +210,7 @@
 	</section>
 
 	<section class="section-mt flex justify-center">
-		<div class="section-container-lg section-x-px">
+		<div class="section-container-lg section-px">
 			<div class="relative inline-block flex-col items-start">
 				<h2 class="section-heading-small">{supportBirch.heading}</h2>
 
@@ -270,7 +268,7 @@
 		@apply font-display text-[48px] leading-[1.15em] font-bold xs-sm:text-[52px] sm:text-6xl 4xl:text-7xl;
 	}
 
-	.section-x-px {
+	.section-px {
 		@apply px-4 xs-sm:px-6 lg:px-8 2xl:px-12 3xl:px-20 4xl:px-40;
 	}
 	.section-mt {
@@ -284,6 +282,10 @@
 	}
 	.section-heading-small {
 		@apply font-display text-[26px] font-bold text-bc-logo-black/70 uppercase xs:text-[28px] xs-sm:text-[30px] sm-md:text-[32px] 4xl:text-[38px];
+	}
+
+	.card-grid-container-lg {
+		@apply flex flex-col justify-between gap-x-20 gap-y-16 xl:flex-row 3xl:gap-x-40;
 	}
 
 	.asset-aspect-ratio {
