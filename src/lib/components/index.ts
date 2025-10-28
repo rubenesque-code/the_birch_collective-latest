@@ -4,3 +4,4 @@ export { FlowerIcon };
 
 export * from './blocks';
 export * from './elements';
+export * from './sections';
