@@ -144,6 +144,9 @@
 }
 
 @layer base {
+	* {
+		@apply outline-none;
+	}
 	body {
 		@apply bg-white text-lg text-bc-logo-black xs-sm:text-xl 4xl:text-2xl;
 	}
