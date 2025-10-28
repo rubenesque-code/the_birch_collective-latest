@@ -76,7 +76,7 @@
 					<enhanced:img
 						class="h-full w-full max-w-full rounded-md object-cover object-left 3xl:w-[700px] 4xl:w-[850px]"
 						src={intro.video.poster}
-						alt=""
+						alt="The Birch Collective introduction video poster"
 					/>
 
 					<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -285,7 +285,7 @@
 	}
 
 	.card-grid-container-lg {
-		@apply flex flex-col justify-between gap-x-20 gap-y-16 xl:flex-row 3xl:gap-x-40;
+		@apply flex flex-col flex-wrap justify-between gap-x-20 gap-y-16 xl:flex-row 3xl:gap-x-40;
 	}
 
 	.asset-aspect-ratio {

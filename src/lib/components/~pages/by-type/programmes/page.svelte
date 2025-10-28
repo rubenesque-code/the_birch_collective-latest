@@ -20,12 +20,11 @@
 		<section class="section-px section-container-lg">
 			<div class="card-grid-container-lg mt-8 w-full">
 				{#each programmes as programme, i (programme.title)}
-					<article aria-labelledby={`tile-${programme.title}`}>
-						<a
-							class="group/tile relative block w-full focus:ring-2 focus:ring-bc-amber focus:outline-none"
-							href={programme.link}
-							aria-label={programme.title}
-						>
+					<article
+						class="group/tile relative focus:ring-2 focus:ring-bc-amber focus:outline-none 3xl:w-[700px] 4xl:w-[850px]"
+						aria-labelledby={`tile-${programme.title}`}
+					>
+						<a href={programme.link} aria-label={programme.title}>
 							<div class="relative">
 								<enhanced:img
 									class="asset-aspect-ratio rounded-sm object-cover"
@@ -71,7 +70,7 @@
 	}
 
 	.card-grid-container-lg {
-		@apply flex flex-col justify-between gap-x-20 gap-y-16 xl:flex-row 3xl:gap-x-40;
+		@apply flex flex-col flex-wrap justify-between gap-x-20 gap-y-16 xl:flex-row 3xl:gap-x-40;
 	}
 
 	.asset-aspect-ratio {
