@@ -7,6 +7,7 @@
 	import { afterNavigate } from '$app/navigation';
 	import { updateDocumentScroll } from '^helpers';
 	import { internal_route } from '^constants';
+
 	import { Tooltip } from '^components/elements';
 
 	const navAlwaysVisible = [
@@ -46,13 +47,19 @@
 </script>
 
 <header class="z-50 flex w-full items-start justify-between">
-	<a
-		class="relative flex flex-col font-display text-[34px] leading-[1.6em] font-bold lg:text-4xl"
-		href="/"
-	>
-		<span class="translate-x-5">The</span>
-		<span class="translate-x-10 -translate-y-2.5 text-[42px] sm-md:text-[54px]">Birch</span>
-		<span class="translate-x-0 -translate-y-5">Collective</span>
+	<a class="relative flex flex-col font-display font-bold" href="/">
+		<span
+			class="translate-x-5 text-3xl leading-[1.25em] sm:text-[33px] sm-md:text-4xl 4xl:text-[42px]"
+			>The</span
+		>
+		<span
+			class="translate-x-10 -translate-y-2.5 text-[42px] leading-[1.25em] sm:text-[46px] sm-md:text-[54px] 4xl:text-6xl"
+			>Birch</span
+		>
+		<span
+			class="translate-x-0 -translate-y-5 text-3xl leading-[1.25em] sm:text-[33px] sm-md:text-4xl 4xl:text-[42px]"
+			>Collective</span
+		>
 	</a>
 
 	<nav

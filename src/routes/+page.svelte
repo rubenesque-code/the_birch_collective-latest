@@ -9,6 +9,7 @@
 	import { aboutUs, hero, impact, intro, offer, supportBirch } from '^content/home';
 
 	import { VideoModal, FlowerIcon } from '^components';
+	import { CtaLink } from '^components/~pages/by-route/home';
 </script>
 
 <script lang="ts">
@@ -18,8 +19,8 @@
 <VideoModal bind:isOpen={introVidIsOpen} mp4Src={intro.video.src} />
 
 <div class="w-screen overflow-x-hidden">
-	<section class="flex h-screen flex-col md:max-h-screen">
-		<div class="relative h-screen w-screen grow">
+	<section class="flex h-screen flex-col md:max-h-screen 4xl:aspect-video 4xl:h-auto">
+		<div class="relative h-full w-screen grow">
 			<video class="absolute top-0 left-0 h-full w-full object-cover" loop muted>
 				<source src={banner} type="video/mp4" />
 				Your browser does not support the video tag.
@@ -29,11 +30,11 @@
 				class="absolute bottom-0 left-0 z-10 h-3/4 w-full bg-linear-to-t from-bc-slate-pine to-transparent 3xl:h-2/3"
 			></div>
 
-			<div class="section-x-px absolute bottom-10 z-20 w-full">
+			<div class="section-x-px absolute bottom-10 z-20 w-full 4xl:bottom-32">
 				<h1 class="hero-heading">{hero.heading}</h1>
 
 				<div
-					class="mt-6 flex max-w-[600px] flex-col gap-4 leading-relaxed font-medium text-white sm:mt-8 lg:mt-10 xl:text-[22px]"
+					class="mt-6 flex max-w-[600px] flex-col gap-4 leading-relaxed font-medium text-white sm:mt-8 lg:mt-10 xl:text-[22px] 4xl:text-2xl"
 				>
 					{#each hero.lead as line}
 						<p>{line}</p>
@@ -41,13 +42,7 @@
 				</div>
 
 				<div class="mt-8 xs:mt-10">
-					<button
-						class="relative flex items-center gap-4 rounded-3xl bg-my-pale-yellow px-3 py-2 tracking-wide xs-sm:px-5 xs-sm:py-2.5"
-						type="button"
-					>
-						<span class="text-[17px] font-medium xs-sm:text-lg">Get Involved Today</span>
-						<span class="text-xl xs-sm:text-2xl"><ArrowRight /></span>
-					</button>
+					<CtaLink text="Get Involved Today" class="bg-my-pale-yellow" href={''} />
 				</div>
 			</div>
 		</div>
@@ -56,11 +51,11 @@
 	<section class="section-mt flex justify-center">
 		<div class="section-x-px section-container-lg relative">
 			<div
-				class="absolute top-0 right-0 -z-10 aspect-square w-[80%] max-w-[900px] translate-x-1/2 -translate-y-1/2 rounded-full bg-my-pale-yellow"
+				class="absolute top-0 right-0 -z-10 aspect-square w-[80%] max-w-[900px] translate-x-1/2 -translate-y-1/2 rounded-full bg-my-pale-yellow 4xl:max-w-[1000px]"
 			></div>
 
-			<div class="flex w-full flex-col justify-between gap-x-12 gap-y-12 xl:flex-row">
-				<div class="w-full xl:max-w-[550px] 2xl:max-w-[640px]">
+			<div class="flex w-full flex-col justify-between gap-x-12 gap-y-12 xl:flex-row 4xl:gap-20">
+				<div class="w-full xl:max-w-[550px] 2xl:max-w-[640px] 4xl:max-w-[800px]">
 					<h2 class="intro-heading text-bc-amber">
 						{intro.heading}
 					</h2>
@@ -79,7 +74,7 @@
 					aria-label="Play video: The Birch Collective — Our Mission"
 				>
 					<enhanced:img
-						class="h-full w-full max-w-full rounded-md object-cover object-left 3xl:w-[700px]"
+						class="h-full w-full max-w-full rounded-md object-cover object-left 3xl:w-[700px] 4xl:w-[850px]"
 						src={intro.video.poster}
 						alt=""
 					/>
@@ -103,7 +98,9 @@
 			</h2>
 
 			<div class="flex justify-center">
-				<div class="mt-6 flex w-full flex-col gap-3 md:mt-8 md:max-w-[600px] md:items-center">
+				<div
+					class="mt-6 flex w-full flex-col gap-3 md:mt-8 md:max-w-[600px] md:items-center 4xl:w-[800px] 4xl:max-w-none"
+				>
 					{#each aboutUs.bullets as text}
 						<p class="flex items-center gap-4">
 							<FlowerIcon />
@@ -119,13 +116,11 @@
 			</div>
 
 			<div class="mt-12 flex justify-center">
-				<a
-					class="relative flex items-center gap-4 rounded-3xl bg-bc-slate-pine/70 px-3 py-2 tracking-wide text-white xs-sm:px-5 xs-sm:py-3"
+				<CtaLink
+					class="bg-bc-slate-pine/90 text-white"
+					text="About Us"
 					href={internal_route.about_us}
-				>
-					<span class="text-[17px] font-medium xs-sm:text-lg">About us</span>
-					<span class="text-xl xs-sm:text-2xl"><ArrowRight /></span>
-				</a>
+				/>
 			</div>
 		</div>
 	</section>
@@ -143,7 +138,7 @@
 			>
 				{#each offer.sections as item}
 					<a
-						class="group/tile relative block focus:ring-2 focus:ring-bc-amber focus:outline-none 3xl:w-[700px]"
+						class="group/tile relative block focus:ring-2 focus:ring-bc-amber focus:outline-none 3xl:w-[700px] 4xl:w-[850px]"
 						href={item.link}
 						aria-label={item.title}
 					>
@@ -163,13 +158,13 @@
 							</div>
 						</div>
 
-						<div class="mt-3 pl-2 xs-sm:mt-4 xl:pl-4">
-							<p class="max-w-[640px] leading-relaxed xl:max-w-[500px]">
+						<div class="mt-3 pl-2 xs-sm:mt-4 xl:pl-4 4xl:mt-6">
+							<p class="max-w-[640px] leading-relaxed xl:max-w-[500px] 4xl:max-w-[640px]">
 								{item.text}
 							</p>
 
 							<span
-								class="mt-3 inline-block text-[26px] text-bc-slate-pine xs-sm:text-3xl sm:text-4xl"
+								class="mt-3 inline-block text-[26px] text-bc-slate-pine xs-sm:text-3xl sm:text-4xl 4xl:mt-4 4xl:text-[42px]"
 							>
 								<ArrowCircleRight />
 							</span>
@@ -187,7 +182,9 @@
 			</h2>
 
 			<div class="flex justify-center">
-				<div class="mt-6 flex w-full flex-col gap-3 md:mt-8 md:max-w-[600px] md:items-center">
+				<div
+					class="mt-6 flex w-full flex-col gap-3 md:mt-8 md:max-w-[600px] md:items-center 4xl:w-[800px] 4xl:max-w-none"
+				>
 					{#each impact.bullets as text}
 						<p class="flex items-center gap-4">
 							<FlowerIcon />
@@ -227,7 +224,7 @@
 			>
 				{#each supportBirch.sections as item}
 					<a
-						class="group/tile relative block focus:ring-2 focus:ring-bc-amber focus:outline-none 3xl:w-[700px]"
+						class="group/tile relative block focus:ring-2 focus:ring-bc-amber focus:outline-none 3xl:w-[700px] 4xl:w-[850px]"
 						href={item.link}
 						aria-label={item.title}
 					>
@@ -254,7 +251,7 @@
 						</div>
 
 						<div class="mt-3 flex flex-col items-start pl-2 xs-sm:mt-4 xl:pl-4">
-							<p class="max-w-[640px] leading-relaxed">
+							<p class="max-w-[640px] leading-relaxed xl:max-w-[500px] 4xl:max-w-[640px]">
 								{item.text}
 							</p>
 						</div>
@@ -270,23 +267,23 @@
 		@apply flex flex-col font-display text-[56px] leading-[1.08em] font-bold tracking-wide text-white xxs:text-6xl xs-sm:text-[62px] sm:max-w-[450px] lg:max-w-[800px] lg:text-7xl 4xl:text-8xl;
 	}
 	.intro-heading {
-		@apply font-display text-[48px] leading-[1.15em] font-bold xs-sm:text-[52px] sm:text-6xl;
+		@apply font-display text-[48px] leading-[1.15em] font-bold xs-sm:text-[52px] sm:text-6xl 4xl:text-7xl;
 	}
 
 	.section-x-px {
 		@apply px-4 xs-sm:px-6 lg:px-8 2xl:px-12 3xl:px-20 4xl:px-40;
 	}
 	.section-mt {
-		@apply mt-10 xs-sm:mt-14 xl:mt-24 3xl:mt-32;
+		@apply mt-10 xs-sm:mt-14 xl:mt-24 3xl:mt-32 4xl:mt-40;
 	}
 	.section-container-lg {
-		@apply box-content w-full max-w-[1600px];
+		@apply box-content w-full max-w-[1600px] 4xl:max-w-[2000px];
 	}
 	.section-heading-bold {
-		@apply font-display text-[46px] leading-[1.15em] font-bold capitalize xs-sm:text-[50px] xl:text-[56px];
+		@apply font-display text-[46px] leading-[1.15em] font-bold capitalize xs-sm:text-[50px] xl:text-[56px] 4xl:text-6xl;
 	}
 	.section-heading-small {
-		@apply font-display text-[26px] font-bold text-bc-logo-black/70 uppercase xs:text-[28px] xs-sm:text-[30px] sm-md:text-[32px];
+		@apply font-display text-[26px] font-bold text-bc-logo-black/70 uppercase xs:text-[28px] xs-sm:text-[30px] sm-md:text-[32px] 4xl:text-[38px];
 	}
 
 	.asset-aspect-ratio {
@@ -294,6 +291,6 @@
 	}
 
 	.card-heading {
-		@apply mt-3.5 font-display text-[40px] leading-[1.35em] font-bold xs-sm:text-[42px] sm:text-[44px];
+		@apply mt-3.5 font-display text-[40px] leading-[1.35em] font-bold xs-sm:text-[42px] sm:text-[44px] 4xl:text-[52px];
 	}
 </style>

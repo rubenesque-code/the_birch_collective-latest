@@ -26,10 +26,10 @@
 </script>
 
 <footer
-	class="mt-32 flex w-full flex-col-reverse items-center justify-between gap-x-8 gap-y-10 px-4 pb-12 sm:px-8 md:mt-40 md:flex-row"
+	class="mt-32 flex w-full flex-col-reverse items-center justify-between gap-x-8 gap-y-10 px-4 pb-12 sm:px-8 md:mt-40 md:flex-row 4xl:mt-52"
 >
 	<div class="max-w-[800px]">
-		<div class="flex flex-row gap-8 text-3xl text-bc-slate-pine">
+		<div class="flex flex-row gap-8 text-3xl text-bc-slate-pine 4xl:text-4xl">
 			{#each socials as item}
 				<a href={item.link} target="_blank">
 					<svelte:component this={item.icon} />
@@ -40,7 +40,7 @@
 		<div class="mt-8 flex flex-row flex-wrap gap-x-8 gap-y-4">
 			{#each routesFirstLine as item}
 				<a
-					class="text-lg font-medium whitespace-nowrap text-bc-logo-black/70 underline underline-offset-2"
+					class="font-medium whitespace-nowrap text-bc-logo-black/70 underline underline-offset-2"
 					href={item.route}
 					target="_blank"
 				>
@@ -52,7 +52,7 @@
 		<div class="mt-3 flex flex-row gap-x-8 gap-y-4">
 			{#each routesSecondLine as item}
 				<a
-					class="text-lg font-medium text-bc-logo-black/70 underline underline-offset-2"
+					class="font-medium text-bc-logo-black/70 underline underline-offset-2"
 					href={item.route}
 					target="_blank"
 				>
@@ -61,7 +61,7 @@
 			{/each}
 		</div>
 
-		<p class="mt-6 text-lg leading-relaxed text-bc-logo-black/60">
+		<p class="mt-6 leading-relaxed text-bc-logo-black/60">
 			The Birch Collective is a Bristol based CIC specialising in working alongside people in
 			nature. We are proud to be a Living Wage employer.
 		</p>
@@ -69,7 +69,7 @@
 		<div class="mt-6 flex flex-row gap-x-8 gap-y-4">
 			{#each routesThirdLine as item}
 				<a
-					class="text-lg font-medium text-bc-logo-black/70 underline underline-offset-2"
+					class="font-medium text-bc-logo-black/70 underline underline-offset-2"
 					href={item.route}
 					target="_blank"
 				>
