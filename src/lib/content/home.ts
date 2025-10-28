@@ -1,10 +1,19 @@
 import { internal_route } from '^constants';
 
-import { basket_being_woven, tim_picking_radishes } from '^images/video-frames';
+import { basket_being_woven, tim_picking_radishes } from '^assets/images/video-frames/banner';
 import {
 	chillie_plants_garlic_hanging,
 	person_standing_axe_chopping
 } from '^images/peoples-health';
+
+const hero = {
+	heading: 'Connect Through Nature',
+	lead: [
+		'Start today in Bristol!',
+		"Join in through one of our programmes! They're both free and paid, and range from one-day drop-ins to longer adventures."
+	],
+	ctaText: 'Get Involved Today'
+};
 
 const introductoryBullets = [
 	'We work alongside you, young adults, to empower and support your transition into adulthood',
@@ -53,4 +62,4 @@ const support = [
 	}
 ];
 
-export { introductoryBullets, offers, impact, support };
+export { hero, introductoryBullets, offers, impact, support };
