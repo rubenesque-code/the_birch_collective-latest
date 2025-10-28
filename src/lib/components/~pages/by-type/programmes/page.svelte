@@ -24,7 +24,7 @@
 						class="group/tile relative focus:ring-2 focus:ring-bc-amber focus:outline-none"
 						aria-labelledby={`tile-${programme.title}`}
 					>
-						<a href={programme.link} aria-label={programme.title}>
+						<a class="w-full" href={programme.link} aria-label={programme.title}>
 							<div class="relative">
 								<enhanced:img
 									class="asset-aspect-ratio rounded-sm object-cover"
@@ -42,13 +42,13 @@
 								</div>
 							</div>
 
-							<div class="mt-3 pl-2 xs-sm:mt-4 xl:pl-4">
-								<p class="max-w-[640px] leading-relaxed xl:max-w-[500px]">
+							<div class="mt-3 pl-2 xs-sm:mt-4 xl:pl-4 4xl:mt-6">
+								<p class="max-w-[640px] leading-relaxed xl:max-w-[500px] 4xl:max-w-[640px]">
 									{programme.text}
 								</p>
 
 								<span
-									class="mt-3 inline-block text-[26px] text-bc-slate-pine xs-sm:text-3xl sm:text-4xl"
+									class="mt-3 inline-block text-[26px] text-bc-slate-pine xs-sm:text-3xl sm:text-4xl 4xl:mt-4 4xl:text-[42px]"
 								>
 									<ArrowCircleRight />
 								</span>
