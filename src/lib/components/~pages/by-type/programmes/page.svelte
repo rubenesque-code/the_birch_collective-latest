@@ -16,12 +16,12 @@
 <div class="w-screen overflow-hidden">
 	<Hero {...hero} align="center-left" headingColour="white" />
 
-	<main class="mt-8 flex justify-center">
+	<main class="mt-8 flex justify-center 3xl:mt-20">
 		<section class="section-px section-container-lg">
 			<div class="card-grid-container-lg mt-8 w-full">
 				{#each programmes as programme, i (programme.title)}
 					<article
-						class="group/tile relative focus:ring-2 focus:ring-bc-amber focus:outline-none 3xl:w-[700px] 4xl:w-[850px]"
+						class="group/tile relative focus:ring-2 focus:ring-bc-amber focus:outline-none"
 						aria-labelledby={`tile-${programme.title}`}
 					>
 						<a href={programme.link} aria-label={programme.title}>
@@ -70,11 +70,11 @@
 	}
 
 	.card-grid-container-lg {
-		@apply flex flex-col flex-wrap justify-between gap-x-20 gap-y-16 xl:flex-row 3xl:gap-x-40;
+		@apply flex flex-col flex-wrap justify-between gap-20 gap-y-16 xl:grid xl:grid-cols-2 xl:flex-row 3xl:gap-x-40 3xl:gap-y-32;
 	}
 
 	.asset-aspect-ratio {
-		@apply aspect-square xs-sm:aspect-4/3 md:aspect-5/3 md-lg:aspect-video;
+		@apply aspect-square xs-sm:aspect-4/3 sm-md:aspect-5/3 md-lg:aspect-video xl:aspect-4/3 3xl:aspect-5/3;
 	}
 
 	.card-heading {

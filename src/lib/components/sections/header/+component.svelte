@@ -3,12 +3,12 @@
 	import { useSwipe, type SwipeCustomEvent } from 'svelte-gestures';
 
 	import { browser } from '$app/environment';
-
 	import { afterNavigate } from '$app/navigation';
+
 	import { updateDocumentScroll } from '^helpers';
 	import { internal_route } from '^constants';
 
-	import { Tooltip } from '^components/elements';
+	import { Tooltip } from '^components';
 
 	const navAlwaysVisible = [
 		{ href: internal_route.get_in_touch, icon: ChatCircle, label: 'Get in touch' },
@@ -48,16 +48,15 @@
 
 <header class="z-50 flex w-full items-start justify-between">
 	<a class="relative flex flex-col font-display font-bold" href="/">
-		<span
-			class="translate-x-5 text-3xl leading-[1.25em] sm:text-[33px] sm-md:text-4xl 4xl:text-[42px]"
+		<span class="translate-x-5 text-3xl leading-[1.25em] sm:text-[33px] md:text-4xl 4xl:text-[42px]"
 			>The</span
 		>
 		<span
-			class="translate-x-10 -translate-y-2.5 text-[42px] leading-[1.25em] sm:text-[46px] sm-md:text-[54px] 4xl:text-6xl"
+			class="translate-x-10 -translate-y-2.5 text-[42px] leading-[1.25em] sm:text-[46px] md:text-[54px] 4xl:text-6xl"
 			>Birch</span
 		>
 		<span
-			class="translate-x-0 -translate-y-5 text-3xl leading-[1.25em] sm:text-[33px] sm-md:text-4xl 4xl:text-[42px]"
+			class="translate-x-0 -translate-y-5 text-3xl leading-[1.25em] sm:text-[33px] md:text-4xl 4xl:text-[42px]"
 			>Collective</span
 		>
 	</a>
