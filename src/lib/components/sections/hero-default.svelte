@@ -72,6 +72,6 @@
 	}
 
 	.hero-heading {
-		@apply flex flex-col font-display text-[56px] leading-[1.08em] font-bold tracking-wide text-white xxs:text-6xl xs-sm:text-[62px] sm:max-w-[450px] lg:max-w-[800px] lg:text-7xl 4xl:text-8xl;
+		@apply flex flex-col font-display text-[56px] leading-[1.08em] font-bold tracking-wide xxs:text-6xl xs-sm:text-[62px] sm:max-w-[450px] lg:max-w-[800px] lg:text-7xl 4xl:text-8xl;
 	}
 </style>

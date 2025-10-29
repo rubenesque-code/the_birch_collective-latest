@@ -15,7 +15,7 @@
 	<div class="section-x-padding box-content w-full max-w-[1200px] 4xl:max-w-[1600px]">
 		<div class="relative">
 			<p class="text-right text-base text-black/70 4xl:text-lg">
-				{title}
+				{@html title}
 			</p>
 
 			<div class="relative mt-1">

@@ -29,7 +29,9 @@
 
 <div class="relative max-w-screen overflow-hidden">
 	<Hero heading={hero.title} lead={hero.lead} align="center-left" headingColour="yellow">
-		<Cta onClick={() => (signUpFormIsOpen = true)} text="Sign Up" />
+		<div class="mt-8 xs:mt-10">
+			<Cta class="bg-white" onClick={() => (signUpFormIsOpen = true)} text="Sign Up" />
+		</div>
 	</Hero>
 
 	<section class="section-mt-lg">
