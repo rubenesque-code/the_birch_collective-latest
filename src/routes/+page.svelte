@@ -8,8 +8,7 @@
 
 	import { aboutUs, hero, impact, intro, offer, supportBirch } from '^content/home';
 
-	import { VideoModal, FlowerIcon } from '^components';
-	import { CtaLink } from '^components/~pages/by-route/home';
+	import { VideoModal, FlowerIcon, Cta } from '^components';
 </script>
 
 <script lang="ts">
@@ -42,7 +41,7 @@
 				</div>
 
 				<div class="mt-8 xs:mt-10">
-					<CtaLink text="Get Involved Today" class="bg-my-pale-yellow" href={''} />
+					<Cta text="Get Involved Today" class="bg-my-pale-yellow" href={''} />
 				</div>
 			</div>
 		</div>
@@ -116,7 +115,7 @@
 			</div>
 
 			<div class="mt-12 flex justify-center">
-				<CtaLink
+				<Cta
 					class="bg-bc-slate-pine/90 text-white"
 					text="About Us"
 					href={internal_route.about_us}

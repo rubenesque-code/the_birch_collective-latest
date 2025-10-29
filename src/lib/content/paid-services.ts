@@ -1,12 +1,10 @@
+import { internal_route } from '^constants';
 import {
-	fresh_air_thursday_sign_foreground,
 	participant_2_with_caregiver_2_affectionate,
 	participants_and_caregivers_sitting_around_fire_shot_through_trellis,
-	person_standing_axe_chopping,
 	shed_stay_calm_listen_nature,
 	trellis_foreground_hut_background
 } from '^images';
-import { internal_route } from '^constants';
 import type { ProgrammePreview } from '^types';
 
 const hero = {
