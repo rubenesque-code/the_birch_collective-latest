@@ -8,7 +8,7 @@
 		drawn_line_black,
 		play_drawn_white
 	} from '^images';
-	import { banner } from '^videos';
+	import banner from '^files/videos/banner.mp4';
 
 	import { aboutUs, hero, impact, intro, offer, supportBirch } from '^content/home';
 
@@ -24,15 +24,15 @@
 <div class="w-screen overflow-x-hidden">
 	<section class="flex h-screen flex-col md:max-h-screen 4xl:aspect-video 4xl:h-auto">
 		<div class="relative h-full w-screen grow">
-			<enhanced:img
+			<!-- 			<enhanced:img
 				class="absolute top-0 left-0 h-full w-full object-cover"
 				src={cinematic_shot_of_blue_sky_through_leaves}
 				alt=""
-			/>
-			<!-- <video class="absolute top-0 left-0 h-full w-full object-cover" autoplay loop muted>
+			/> -->
+			<video class="absolute top-0 left-0 h-full w-full object-cover" autoplay loop muted>
 				<source src={banner} type="video/mp4" />
 				Your browser does not support the video tag.
-			</video> -->
+			</video>
 
 			<div
 				class="absolute bottom-0 left-0 z-10 h-3/4 w-full bg-linear-to-t from-bc-slate-pine to-transparent 3xl:h-2/3"
