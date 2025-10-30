@@ -20,7 +20,7 @@
 <div class="w-screen overflow-x-hidden">
 	<section class="flex h-screen flex-col md:max-h-screen 4xl:aspect-video 4xl:h-auto">
 		<div class="relative h-full w-screen grow">
-			<video class="absolute top-0 left-0 h-full w-full object-cover" loop muted>
+			<video class="absolute top-0 left-0 h-full w-full object-cover" autoplay loop muted>
 				<source src={banner} type="video/mp4" />
 				Your browser does not support the video tag.
 			</video>
@@ -58,7 +58,7 @@
 					<h2 class="intro-heading text-bc-amber">
 						{intro.heading}
 					</h2>
-					<p class="mt-6 xs-sm:mt-8">
+					<p>
 						<span class="leading-relaxed text-bc-logo-black">{intro.text}</span>
 					</p>
 				</div>
