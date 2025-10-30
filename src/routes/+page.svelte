@@ -8,7 +8,6 @@
 		drawn_line_black,
 		play_drawn_white
 	} from '^images';
-	import banner from '^files/videos/banner.mp4';
 
 	import { aboutUs, hero, impact, intro, offer, supportBirch } from '^content/home';
 
@@ -30,7 +29,7 @@
 				alt=""
 			/> -->
 			<video class="absolute top-0 left-0 h-full w-full object-cover" autoplay loop muted>
-				<source src={banner} type="video/mp4" />
+				<source src="/videos/banner.mp4" type="video/mp4" />
 				Your browser does not support the video tag.
 			</video>
 
