@@ -32,7 +32,7 @@ const info = {
 		map: location_map,
 		text: 'Strawberry Lane Community Gardens',
 		mapLink: 'https://maps.app.goo.gl/32cRvbigC2fC3pPF9',
-		modalTitle: "Images from <span class='text-bc-amber italic'>Fresh</span>"
+		modalTitle: "How to get to <span class='text-bc-slate-pine'>Fresh</span>"
 	}
 };
 

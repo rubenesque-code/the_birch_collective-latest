@@ -1,9 +1,9 @@
 <script lang="ts" module>
 	import { cinematic_shot_of_blue_sky_with_sunlight_through_leaves } from '^images';
-	import { participant_testimonial_poster } from '^images/programmes/fresh';
-	import { intro, participant_testimonial } from '^videos/programmes/fresh';
+	import { participant_testimonial_poster } from '^images/programmes/recoupe';
+	import { intro as introVid, participant_testimonial } from '^videos/programmes/recoupe';
 
-	import { expect, feedback, hero, imageGallery, info, joinUs } from '^content/fresh-air-thursday';
+	import { expect, hero, intro, info, join, imageGallery, feedback } from '^content/recoupe';
 
 	import {
 		ContentSectionContainer,
@@ -37,7 +37,7 @@
 	<section class="section-mt-lg">
 		<ContentSectionContainer variant="text">
 			<p class="leading-relaxed">
-				{hero.intro}
+				{intro}
 			</p>
 		</ContentSectionContainer>
 	</section>
@@ -69,9 +69,9 @@
 				bind:isOpen={playIntro}
 				poster={cinematic_shot_of_blue_sky_with_sunlight_through_leaves}
 				posterAlt=""
-				title="Fresh — An Intro"
+				title="Recoupe — An Intro"
 				titlePlacement="top"
-				videoSrc={intro}
+				videoSrc={introVid}
 			/>
 		</ContentSectionContainer>
 	</section>
@@ -98,13 +98,13 @@
 
 	<section class="section-mt-lg">
 		<ContentSectionContainer variant="text">
-			<h2 class="heading-sm">{joinUs.heading}</h2>
+			<h2 class="heading-sm">{join.heading}</h2>
 
-			<h4 class="sub-heading-lg after-heading-sm-mt">{joinUs.subheading}</h4>
+			<h4 class="sub-heading-lg after-heading-sm-mt">{join.subheading}</h4>
 
 			<div class="after-sub-heading-lg-mt">
 				<div class="flex flex-col gap-3">
-					{#each joinUs.items as { text, symbol }}
+					{#each join.items as { text, symbol }}
 						<p class="flex items-center gap-3">
 							<span>{symbol}</span>
 							<span class="leading-[1.6em] text-black/90 decoration-bc-amber/30 underline-offset-2">

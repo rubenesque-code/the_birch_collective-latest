@@ -66,3 +66,12 @@
 </div>
 
 <ImageModal bind:isOpen={showLocationMap} imgSrc={mapSrc} title={modalTitle} />
+
+<style>
+	.info-title {
+		@apply font-display text-[25px] font-bold text-bc-amber capitalize 4xl:text-3xl;
+	}
+	.info-text {
+		@apply text-base text-black/90 uppercase md:text-[19px] 4xl:text-[23px];
+	}
+</style>
