@@ -3,15 +3,12 @@
 
 	import { internal_route } from '^constants';
 
-	import {
-		cinematic_shot_of_blue_sky_through_leaves,
-		drawn_line_black,
-		play_drawn_white
-	} from '^images';
+	import banner from '^files/videos/banner.mp4';
+	import { drawn_line_black, play_drawn_white } from '^images';
 
 	import { aboutUs, hero, impact, intro, offer, supportBirch } from '^content/home';
 
-	import { VideoModal, FlowerIcon, Cta } from '^components';
+	import { Cta, FlowerIcon, VideoModal } from '^components';
 </script>
 
 <script lang="ts">
@@ -29,7 +26,7 @@
 				alt=""
 			/> -->
 			<video class="absolute top-0 left-0 h-full w-full object-cover" autoplay loop muted>
-				<source src="/videos/banner.mp4" type="video/mp4" />
+				<source src={banner} type="video/mp4" />
 				Your browser does not support the video tag.
 			</video>
 
