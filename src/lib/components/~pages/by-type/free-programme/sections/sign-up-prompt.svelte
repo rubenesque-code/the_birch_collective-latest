@@ -3,7 +3,7 @@
 </script>
 
 <div class="flex justify-center">
-	<div class="section-x-padding box-content flex w-full max-w-3xl flex-col items-center">
+	<div class="section-px box-content flex w-full max-w-3xl flex-col items-center">
 		<p class="text-black/80 italic">
 			<span>Ready to get on board?</span>
 			<span>Fill out our online form - it takes around 3 minutes.</span>
@@ -24,3 +24,9 @@
 		</div>
 	</div>
 </div>
+
+<style>
+	.section-px {
+		@apply px-4 xs-sm:px-6 lg:px-8 2xl:px-12 3xl:px-20 4xl:px-40;
+	}
+</style>

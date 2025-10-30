@@ -24,7 +24,7 @@
 
 <header class="relative flex justify-center">
 	<div
-		class={`section-px relative box-content flex w-full flex-col overflow-visible pt-40 pb-20 sm-md:pt-42 md:pt-46 lg:pt-52 xl:pb-28 ${align === 'right' ? 'lg:items-end' : 'lg:items-start'} ${align !== 'center-left' ? 'max-w-[1800px]' : 'max-w-[1600px] 4xl:max-w-[2000px]'}`}
+		class={`section-px relative flex w-full flex-col overflow-visible  pt-40 pb-20 sm-md:pt-42 md:pt-46 lg:pt-52 xl:pb-28 ${align === 'right' ? 'lg:items-end' : 'lg:items-start'} ${align !== 'center-left' ? 'max-w-[1800px]' : 'max-w-[1600px] 4xl:max-w-[2000px]'}`}
 	>
 		<h1
 			id="programmes-heading"

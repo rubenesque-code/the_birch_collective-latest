@@ -3,7 +3,7 @@
 
 	import { fly } from 'svelte/transition';
 
-	import { Footer, Header, HeaderVisibility } from '^components';
+	import { Footer, Header, HeaderVisibility, Toaster } from '^components';
 </script>
 
 <script lang="ts">
@@ -28,3 +28,5 @@
 <Footer />
 
 <HeaderVisibility bind:hideHeader />
+
+<Toaster toastOptions={{ class: '!text-lg' }} />

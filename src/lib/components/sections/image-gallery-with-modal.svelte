@@ -12,7 +12,7 @@
 </script>
 
 <div class="flex justify-center">
-	<div class="section-x-padding box-content w-full max-w-[1200px] 4xl:max-w-[1600px]">
+	<div class="section-px box-content w-full max-w-[1200px] 4xl:max-w-[1600px]">
 		<div class="relative">
 			<p class="text-right text-base text-black/70 4xl:text-lg">
 				{@html title}
@@ -58,5 +58,8 @@
 <style>
 	.image-gallery-row-container {
 		@apply flex h-[220px] w-full gap-3 xs:h-[250px] sm:h-[300px] 4xl:h-[400px];
+	}
+	.section-px {
+		@apply px-4 xs-sm:px-6 lg:px-8 2xl:px-12 3xl:px-20 4xl:px-40;
 	}
 </style>

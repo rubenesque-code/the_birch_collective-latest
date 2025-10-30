@@ -19,7 +19,14 @@
 		<span class="icon"><ArrowRight /></span>
 	</a>
 {:else}
-	<button class={cn('parent', className)} onclick={onClick}>
+	<button
+		class={cn('parent', className)}
+		onclick={() => {
+			if (onClick) {
+				onClick();
+			}
+		}}
+	>
 		<span class="text">{text}</span>
 		<span class="icon"><ArrowRight /></span>
 	</button>
@@ -27,7 +34,7 @@
 
 <style>
 	.parent {
-		@apply relative inline-flex items-center gap-4 rounded-3xl px-3 py-2 tracking-wide xs-sm:px-5 xs-sm:py-2.5;
+		@apply relative inline-flex cursor-pointer items-center gap-4 rounded-3xl px-3 py-2 tracking-wide xs-sm:px-5 xs-sm:py-2.5;
 	}
 	.text {
 		@apply text-[17px] font-medium xs-sm:text-lg 4xl:text-xl;

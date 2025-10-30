@@ -9,7 +9,7 @@
 		ContentSectionContainer,
 		ImageGalleryWithModal,
 		Hero,
-		// SignUpFormModal,
+		SignUpFormModal,
 		VideoWithModal,
 		Cta
 	} from '^components';
@@ -25,7 +25,7 @@
 	let signUpFormIsOpen = $state(false);
 </script>
 
-<!-- <SignUpFormModal bind:isOpen={signUpFormIsOpen} /> -->
+<SignUpFormModal bind:isOpen={signUpFormIsOpen} />
 
 <div class="relative max-w-screen overflow-hidden">
 	<Hero heading={hero.title} lead={hero.lead} align="center-left" headingColour="yellow">
