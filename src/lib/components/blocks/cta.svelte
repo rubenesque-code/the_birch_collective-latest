@@ -1,5 +1,5 @@
 <script lang="ts" module>
-	import { ArrowRight } from 'phosphor-svelte';
+	import { ArrowRight, CheckFat } from 'phosphor-svelte';
 
 	import { cn } from '^utils';
 </script>
@@ -9,11 +9,23 @@
 		text,
 		class: className,
 		href,
-		onClick
-	}: { text: string; class?: string; href?: string; onClick?: () => void } = $props();
+		onClick,
+		disable
+	}: {
+		text: string;
+		class?: string;
+		href?: string;
+		onClick?: () => void;
+		disable?: boolean;
+	} = $props();
 </script>
 
-{#if href}
+{#if disable}
+	<p class={cn('parent', className)}>
+		<span class="text">{text}</span>
+		<span class="icon"><CheckFat /></span>
+	</p>
+{:else if href}
 	<a class={cn('parent', className)} {href}>
 		<span class="text">{text}</span>
 		<span class="icon"><ArrowRight /></span>

@@ -8,6 +8,7 @@
 		ref = $bindable(null),
 		class: className,
 		children,
+		hiddenParentClass,
 		...restProps
 	}: WithElementRef<HTMLAttributes<HTMLDivElement>> & {
 		hiddenParentClass?: HTMLAttributes<HTMLDivElement>['class'];
@@ -18,7 +19,7 @@
 
 <div
 	data-slot="carousel-content"
-	class="overflow-hidden"
+	class={cn('overflow-hidden', hiddenParentClass)}
 	use:emblaCarouselSvelte={{
 		options: {
 			container: '[data-embla-container]',

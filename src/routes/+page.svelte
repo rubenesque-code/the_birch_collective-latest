@@ -58,7 +58,7 @@
 					<h2 class="intro-heading text-bc-amber">
 						{intro.heading}
 					</h2>
-					<p>
+					<p class="mt-6 xs-sm:mt-8">
 						<span class="leading-relaxed text-bc-logo-black">{intro.text}</span>
 					</p>
 				</div>

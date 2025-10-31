@@ -8,7 +8,7 @@ const internal_route = {
 	practice_methodology: '/practice-methodology',
 	testimonials: '/testimonials',
 
-	fresh_air_thursday: '/fresh-air-thursday',
+	fresh_air_thursday: '/fresh',
 	recoupe: '/recoupe',
 	seeding_change: '/seeding-change',
 	youth_advisory_and_steering: '/youth-advisory-and-steering',
