@@ -271,4 +271,14 @@ const imageGallery = {
 	]
 };
 
-export { expect, join, details, benefits, pay, hero, intro, info, imageGallery };
+const furtherInfo = {
+	heading: 'Further info',
+	subheading: 'How to find out more',
+	infoPack: {
+		lead: 'Our info pack has some more info',
+		link: 'https://drive.google.com/file/d/1Jvi9YNXeQ-szYOVZTjUiFIW8jSOX7S7d/view?usp=sharing',
+		label: 'Download information pack'
+	}
+};
+
+export { expect, join, details, benefits, pay, hero, intro, info, imageGallery, furtherInfo };

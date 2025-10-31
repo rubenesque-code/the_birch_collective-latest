@@ -11,18 +11,21 @@
 		hero,
 		intro,
 		info,
-		imageGallery
+		imageGallery,
+		furtherInfo
 	} from '^content/seeding-change';
 
 	import {
 		ContentSectionContainer,
 		Cta,
+		FlowerIcon,
 		Hero,
 		ImageGalleryWithModal,
 		SignUpFormModal,
 		VideoWithModal
 	} from '^components';
 	import { BulletPoints, SignUpPromptSection } from '^components/~pages/by-type/free-programme';
+	import { Download } from 'phosphor-svelte';
 </script>
 
 <script lang="ts">
@@ -130,6 +133,54 @@
 			<h2 class="heading-sm">{pay.heading}</h2>
 
 			<h4 class="sub-heading-lg after-heading-sm-mt">{pay.subheading}</h4>
+
+			<p class="after-sub-heading-lg-mt">
+				{pay.lead}
+			</p>
+
+			<div class="after-sub-heading-lg-mt flex flex-col items-start gap-8">
+				{#each pay.sections as section, i}
+					<div class="flex flex-col items-start gap-4">
+						<h4
+							class={`rounded-md px-2 py-1 font-display text-3xl font-bold text-white ${i === 0 ? 'bg-bc-oxide-brown' : i === 1 ? 'bg-bc-amber' : i === 2 ? 'bg-bc-burnt-sienna' : i === 3 ? 'bg-bc-slate-pine' : 'bg-bc-amber'}`}
+						>
+							{section.title} — £{section.cost}
+						</h4>
+
+						<div class="flex flex-col gap-3">
+							{#each section.text as line}
+								<div class="flex items-center gap-2">
+									<span class="text-sm">
+										<FlowerIcon />
+									</span>
+									<p>{line}</p>
+								</div>
+							{/each}
+						</div>
+					</div>
+				{/each}
+
+				<div class="relative w-full max-w-[600px] rounded-md bg-bc-slate-pine p-4 text-white">
+					<h4
+						class="absolute -top-2 left-0 rounded-md bg-bc-amber px-2 py-1 font-display text-3xl font-bold text-white"
+					>
+						Explainer
+					</h4>
+
+					<p class="mt-6 text-[16px] text-background">
+						This sliding scale helps us to support financial equality in our community and keep
+						Birch Collective for <span class="underline">everyone</span>.
+					</p>
+					<p class="mt-2 text-[16px] text-background">
+						Basic needs are things like: access to food, safety, shelter/housing, pivacy and
+						transportation.
+					</p>
+					<p class="mt-2 text-[16px] text-background">
+						Expendable income is the ability to afford things like a coffee out, the cinema or going
+						to a gig.
+					</p>
+				</div>
+			</div>
 		</ContentSectionContainer>
 	</section>
 
@@ -137,8 +188,26 @@
 		<ImageGalleryWithModal images={imageGallery.images} title={imageGallery.title} />
 	</section>
 
-	<section class="section-mt-xl">
-		<SignUpPromptSection onOpenSignUp={() => (signUpFormIsOpen = true)} />
+	<section class="section-mt-lg">
+		<ContentSectionContainer variant="text">
+			<h2 class="heading-sm">{furtherInfo.heading}</h2>
+
+			<h4 class="sub-heading-lg after-heading-sm-mt">{furtherInfo.subheading}</h4>
+
+			<div class="after-sub-heading-lg-mt">
+				<!-- <p>{furtherInfo.infoPack.lead}:</p> -->
+				<a
+					class="mt-4 flex items-center gap-2 text-base text-bc-logo-black/50"
+					href={furtherInfo.infoPack.link}
+					target="_blank"
+				>
+					<span>
+						<Download />
+					</span>
+					<span>{furtherInfo.infoPack.label}</span>
+				</a>
+			</div>
+		</ContentSectionContainer>
 	</section>
 </div>
 
