@@ -15,7 +15,7 @@ const internal_route = {
 
 	bespoke_nature_workshops: '/bespoke-nature-workshops',
 	corporate_nature_team_days: '/corporate-nature-team-days',
-	nature_based_mentoring: '/nature-based-mentoring',
+	nature_based_mentoring: '/one-to-one-nature-mentoring',
 	therapeutic_forest_school: '/therapeutic-forest-school'
 };
 
