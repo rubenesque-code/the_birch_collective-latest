@@ -82,7 +82,7 @@
 
 			<h4 class="sub-heading-lg after-heading-sm-mt">{details.subheading}</h4>
 
-			<p class="after-sub-heading-lg-mt">
+			<p class="after-sub-heading-lg-mt leading-relaxed">
 				{details.lead}
 			</p>
 
@@ -134,15 +134,15 @@
 
 			<h4 class="sub-heading-lg after-heading-sm-mt">{pay.subheading}</h4>
 
-			<p class="after-sub-heading-lg-mt">
+			<p class="after-sub-heading-lg-mt leading-relaxed">
 				{pay.lead}
 			</p>
 
-			<div class="after-sub-heading-lg-mt flex flex-col items-start gap-8">
+			<div class="after-sub-heading-lg-mt flex flex-col flex-wrap items-start gap-8">
 				{#each pay.sections as section, i}
 					<div class="flex flex-col items-start gap-4">
 						<h4
-							class={`rounded-md px-2 py-1 font-display text-3xl font-bold text-white ${i === 0 ? 'bg-bc-oxide-brown' : i === 1 ? 'bg-bc-amber' : i === 2 ? 'bg-bc-burnt-sienna' : i === 3 ? 'bg-bc-slate-pine' : 'bg-bc-amber'}`}
+							class={`rounded-md px-2 py-1 font-display text-3xl font-bold text-white sm-md:text-[32px] ${i === 0 ? 'bg-bc-oxide-brown' : i === 1 ? 'bg-bc-amber' : i === 2 ? 'bg-bc-burnt-sienna' : i === 3 ? 'bg-bc-slate-pine' : 'bg-bc-amber'}`}
 						>
 							{section.title} — £{section.cost}
 						</h4>
@@ -159,27 +159,30 @@
 						</div>
 					</div>
 				{/each}
+			</div>
 
-				<div class="relative w-full max-w-[600px] rounded-md bg-bc-slate-pine p-4 text-white">
-					<h4
-						class="absolute -top-2 left-0 rounded-md bg-bc-amber px-2 py-1 font-display text-3xl font-bold text-white"
-					>
-						Explainer
-					</h4>
+			<div
+				class="relative mt-8 w-full max-w-[600px] rounded-md bg-bc-slate-pine p-4 text-white sm-md:mt-12"
+			>
+				<h4
+					class="absolute -top-2 left-0 rounded-md bg-bc-amber px-2 py-1 font-display text-3xl font-bold text-white sm-md:text-[32px]"
+				>
+					Explainer
+				</h4>
 
-					<p class="mt-6 text-[16px] text-background">
-						This sliding scale helps us to support financial equality in our community and keep
-						Birch Collective for <span class="underline">everyone</span>.
-					</p>
-					<p class="mt-2 text-[16px] text-background">
-						Basic needs are things like: access to food, safety, shelter/housing, pivacy and
-						transportation.
-					</p>
-					<p class="mt-2 text-[16px] text-background">
-						Expendable income is the ability to afford things like a coffee out, the cinema or going
-						to a gig.
-					</p>
-				</div>
+				<p class="mt-6 text-[16px] leading-relaxed text-background sm-md:mt-8 md-lg:text-[18px]">
+					This sliding scale helps us to support financial equality in our community and keep Birch
+					Collective for <span class="underline">everyone</span>.
+				</p>
+				<p class="mt-6 text-[16px] leading-relaxed text-background md-lg:text-[18px]">
+					Basic needs are things like: access to food, safety, shelter/housing, pivacy and
+					transportation.
+				</p>
+
+				<p class="mt-6 text-[16px] leading-relaxed text-background md-lg:text-[18px]">
+					Expendable income is the ability to afford things like a coffee out, the cinema or going
+					to a gig.
+				</p>
 			</div>
 		</ContentSectionContainer>
 	</section>
@@ -195,7 +198,6 @@
 			<h4 class="sub-heading-lg after-heading-sm-mt">{furtherInfo.subheading}</h4>
 
 			<div class="after-sub-heading-lg-mt">
-				<!-- <p>{furtherInfo.infoPack.lead}:</p> -->
 				<a
 					class="mt-4 flex items-center gap-2 text-base text-bc-logo-black/50"
 					href={furtherInfo.infoPack.link}
