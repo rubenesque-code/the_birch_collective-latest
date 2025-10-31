@@ -54,9 +54,15 @@
 		<ContentSectionContainer variant="text">
 			<div class="info-container">
 				{#each info.main as item}
-					<p class="info-line">
+					<p class={`info-line ${typeof item.text === 'string' ? '' : 'flex-col! items-start!'}`}>
 						<span class="info-title">{item.title}:</span>
-						<span class="info-text">{item.text}</span>
+						{#if typeof item.text === 'string'}
+							<span class="info-text">{item.text}</span>
+						{:else}
+							{#each item.text as line}
+								<span class="info-text"><span class="text-bc-logo-black/50">-</span> {line}</span>
+							{/each}
+						{/if}
 					</p>
 				{/each}
 			</div>
@@ -170,16 +176,16 @@
 					Explainer
 				</h4>
 
-				<p class="mt-6 text-[16px] leading-relaxed text-background sm-md:mt-8 md-lg:text-[18px]">
+				<p class="mt-6 text-[16px] leading-relaxed sm-md:mt-8 md-lg:text-[18px]">
 					This sliding scale helps us to support financial equality in our community and keep Birch
 					Collective for <span class="underline">everyone</span>.
 				</p>
-				<p class="mt-6 text-[16px] leading-relaxed text-background md-lg:text-[18px]">
+				<p class="mt-6 text-[16px] leading-relaxed md-lg:text-[18px]">
 					Basic needs are things like: access to food, safety, shelter/housing, pivacy and
 					transportation.
 				</p>
 
-				<p class="mt-6 text-[16px] leading-relaxed text-background md-lg:text-[18px]">
+				<p class="mt-6 text-[16px] leading-relaxed md-lg:text-[18px]">
 					Expendable income is the ability to afford things like a coffee out, the cinema or going
 					to a gig.
 				</p>

@@ -21,7 +21,11 @@ const info = {
 	main: [
 		{
 			title: 'Dates',
-			text: 'First 2 night Camp: 5th - 7th September, Second 3 night Camp: 2nd - 5th April with 5 evening Meet-ups in Aug, Oct, Dec, Feb & March over 7 months., Participation needed throughout.'
+			text: [
+				'First 2 night Camp: 5th - 7th September',
+				'Second 3 night Camp: 2nd - 5th April with 5 evening Meet-ups in Aug, Oct, Dec, Feb & March over 7 months.',
+				'Participation needed throughout'
+			]
 		},
 		{ title: 'Who for?', text: '18 - 25 year olds in Bristol' },
 		{ title: 'Where', text: 'A beautiful location in wales 35 minutes from Bristol' },
