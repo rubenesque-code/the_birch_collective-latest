@@ -1,5 +1,5 @@
 <script lang="ts" module>
-	import { poster } from '^images/programmes/steering';
+	import { group_photo, poster } from '^images/programmes/steering';
 	import { expect, hero, imageGallery, info, intro, other } from '^content/steering';
 
 	import {
@@ -14,10 +14,13 @@
 		InfoSectionLocation,
 		SignUpPromptSection
 	} from '^components/~pages/by-type/free-programme';
+
+	const formHref = 'https://form.jotform.com/252393595086367';
 </script>
 
 <script lang="ts">
 	let posterIsOpen = $state(false);
+	let groupPhotoIsOpen = $state(false);
 	let signUpFormIsOpen = $state(false);
 </script>
 
@@ -28,16 +31,16 @@
 	imgSrc={poster}
 	title="<span class='text-bc-amber/90 italic'>Steering</span> poster"
 />
+<ImageModal
+	bind:isOpen={groupPhotoIsOpen}
+	imgSrc={group_photo}
+	title="<span class='text-bc-amber/90 italic'>Steering Group</span> 2024"
+/>
 
 <div class="relative max-w-screen overflow-hidden">
 	<Hero heading={hero.heading} lead={hero.lead} align="center-left" headingColour="yellow">
 		<div class="mt-8 xs:mt-10">
-			<Cta
-				class="bg-white"
-				href="https://form.jotform.com/252393595086367"
-				target="_blank"
-				text="Sign Up"
-			/>
+			<Cta class="bg-white" href={formHref} target="_blank" text="Sign Up" />
 		</div>
 	</Hero>
 
@@ -89,7 +92,7 @@
 					{#each expect.items as { symbol, title, text }}
 						<div>
 							<h4 class="sub-heading-lg">
-								<span class="mr-1 text-3xl">
+								<span class="mr-1 text-[27px] lg:text-3xl">
 									{symbol}
 								</span>
 								{title}
@@ -108,7 +111,7 @@
 	</section>
 
 	<section class="section-mt-xl">
-		<SignUpPromptSection onOpenSignUp={() => (signUpFormIsOpen = true)} />
+		<SignUpPromptSection href={formHref} />
 	</section>
 
 	<section class="section-mt-lg">
@@ -132,6 +135,26 @@
 						if (e.key === 'Enter' || e.key === ' ') {
 							e.preventDefault();
 							posterIsOpen = true;
+						}
+					}}
+					tabindex="0"
+					role="button"
+				/>
+			</div>
+
+			<div class="after-sub-heading-lg-mt">
+				<p class="text-right text-base! text-bc-logo-black/60 md:text-lg">
+					<span class="text-bc-amber/90 italic">Steering Group</span> 2024
+				</p>
+				<enhanced:img
+					class="mt-1 cursor-pointer"
+					src={group_photo}
+					alt="Group photo from Steering Group 2024"
+					onclick={() => (groupPhotoIsOpen = true)}
+					onkeydown={(e) => {
+						if (e.key === 'Enter' || e.key === ' ') {
+							e.preventDefault();
+							groupPhotoIsOpen = true;
 						}
 					}}
 					tabindex="0"

@@ -1,5 +1,5 @@
 <script lang="ts">
-	let { onOpenSignUp }: { onOpenSignUp: () => void } = $props();
+	let { onOpenSignUp, href }: { onOpenSignUp?: () => void; href?: string } = $props();
 </script>
 
 <div class="flex justify-center">
@@ -11,11 +11,19 @@
 
 		<div class="mt-6 flex justify-center">
 			<div class="relative flex items-center gap-8">
-				<button
-					class="cursor-pointer px-4 py-1.5 font-display text-[27px] font-bold tracking-wide text-white uppercase md:text-[30px] 4xl:text-[36px]"
-					onclick={onOpenSignUp}
-					type="button">Sign Up Today For Free</button
-				>
+				{#if href}
+					<a
+						class="cursor-pointer px-4 py-1.5 font-display text-[27px] font-bold tracking-wide text-white uppercase md:text-[30px] 4xl:text-[36px]"
+						{href}
+						target="_blank">Sign Up Today For Free</a
+					>
+				{:else}
+					<button
+						class="cursor-pointer px-4 py-1.5 font-display text-[27px] font-bold tracking-wide text-white uppercase md:text-[30px] 4xl:text-[36px]"
+						onclick={onOpenSignUp}
+						type="button">Sign Up Today For Free</button
+					>
+				{/if}
 
 				<div
 					class="absolute top-0 left-0 -z-10 h-full w-full overflow-visible bg-bc-mineral-jade"
