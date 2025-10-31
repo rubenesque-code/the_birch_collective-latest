@@ -35,7 +35,7 @@ const programmes: ProgrammePreview[] = [
 		text: 'A 7-month journey with seasonal camps, evening meetups, and mentoring for 18–25s, supporting purpose, leadership, and community building.'
 	},
 	{
-		link: internal_route.youth_advisory_and_steering,
+		link: internal_route.steering,
 		imgAlt: 'The Birch Collective - stay calm and listen to nature',
 		imgSrc: shed_stay_calm_listen_nature,
 		title: 'Steering Group Workshops',

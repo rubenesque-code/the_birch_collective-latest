@@ -10,11 +10,13 @@
 		class: className,
 		href,
 		onClick,
-		disable
+		disable,
+		target = '_self'
 	}: {
 		text: string;
 		class?: string;
 		href?: string;
+		target?: '_blank' | '_self';
 		onClick?: () => void;
 		disable?: boolean;
 	} = $props();
@@ -26,7 +28,7 @@
 		<span class="icon"><CheckFat /></span>
 	</p>
 {:else if href}
-	<a class={cn('parent', className)} {href}>
+	<a class={cn('parent', className)} {href} {target}>
 		<span class="text">{text}</span>
 		<span class="icon"><ArrowRight /></span>
 	</a>

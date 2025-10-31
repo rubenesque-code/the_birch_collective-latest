@@ -11,7 +11,7 @@ const internal_route = {
 	fresh_air_thursday: '/fresh',
 	recoupe: '/recoupe',
 	seeding_change: '/seeding-change',
-	youth_advisory_and_steering: '/youth-advisory-and-steering',
+	steering: '/steering',
 
 	bespoke_nature_workshops: '/bespoke-nature-workshops',
 	corporate_nature_team_days: '/corporate-nature-team-days',

@@ -17,7 +17,7 @@
 
 <VideoModal bind:isOpen={introVidIsOpen} mp4Src={intro.video.src} />
 
-<div class="w-screen overflow-x-hidden">
+<div class=" w-screen overflow-x-hidden">
 	<section class="flex h-screen flex-col md:max-h-screen 4xl:aspect-video 4xl:h-auto">
 		<div class="relative h-full w-screen grow">
 			<video class="absolute top-0 left-0 h-full w-full object-cover" autoplay loop muted>

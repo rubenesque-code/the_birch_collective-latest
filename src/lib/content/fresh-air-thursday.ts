@@ -15,11 +15,11 @@ const hero = {
 	lead: [
 		'A weekly group every Thursday. Currently running upto December 18th 2025',
 		"5 minutes from St George's Park, Bristol"
-	],
-	intro: [
-		'Fresh is our weekly group for 16-25 year olds. We offer a range of activities designed at a pace to make learning accessible and to draw out your creativity. There is no fixed time limit to attendance, attend all year round, once a month or just one off, totally up to you.  You can attend until your 26 birthday. If you are older the 26 or reach that age there are opportunities to return as peer mentor to support others, if this is of interest to you.'
 	]
 };
+
+const intro =
+	'Fresh is our weekly group for 16-25 year olds. We offer a range of activities designed at a pace to make learning accessible and to draw out your creativity. There is no fixed time limit to attendance, attend all year round, once a month or just one off, totally up to you.  You can attend until your 26 birthday. If you are older the 26 or reach that age there are opportunities to return as peer mentor to support others, if this is of interest to you.';
 
 const info = {
 	main: [
@@ -112,4 +112,4 @@ const imageGallery = {
 	]
 };
 
-export { hero, info, expect, joinUs, feedback, imageGallery };
+export { hero, info, expect, joinUs, feedback, imageGallery, intro };

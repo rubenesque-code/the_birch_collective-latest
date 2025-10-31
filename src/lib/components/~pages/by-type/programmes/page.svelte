@@ -19,7 +19,7 @@
 	<main class="mt-8 flex justify-center 3xl:mt-20">
 		<section class="section-px section-container-lg">
 			<div class="card-grid-container-lg mt-8 w-full">
-				{#each programmes as programme, i (programme.title)}
+				{#each programmes as programme (programme.title)}
 					<article
 						class="group/tile relative focus:ring-2 focus:ring-bc-amber focus:outline-none"
 						aria-labelledby={`tile-${programme.title}`}

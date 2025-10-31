@@ -1,17 +1,14 @@
 <script lang="ts" module>
-	import { cinematic_shot_of_blue_sky_with_sunlight_through_leaves } from '^images';
-	import { participant_testimonial_poster } from '^images/programmes/fresh';
-	import { intro, participant_testimonial } from '^videos/programmes/fresh';
-
-	import { expect, feedback, hero, imageGallery, info, joinUs } from '^content/fresh-air-thursday';
+	import { poster } from '^images/programmes/steering';
+	import { expect, hero, imageGallery, info, intro, other } from '^content/steering';
 
 	import {
 		ContentSectionContainer,
 		Cta,
 		Hero,
 		ImageGalleryWithModal,
-		SignUpFormModal,
-		VideoWithModal
+		ImageModal,
+		SignUpFormModal
 	} from '^components';
 	import {
 		InfoSectionLocation,
@@ -20,25 +17,45 @@
 </script>
 
 <script lang="ts">
-	let playIntro = $state(false);
-	let playTestimonial = $state(false);
+	let posterIsOpen = $state(false);
 	let signUpFormIsOpen = $state(false);
 </script>
 
 <SignUpFormModal bind:isOpen={signUpFormIsOpen} />
 
+<ImageModal
+	bind:isOpen={posterIsOpen}
+	imgSrc={poster}
+	title="<span class='text-bc-amber/90 italic'>Steering</span> poster"
+/>
+
 <div class="relative max-w-screen overflow-hidden">
-	<Hero heading={hero.title} lead={hero.lead} align="center-left" headingColour="yellow">
+	<Hero heading={hero.heading} lead={hero.lead} align="center-left" headingColour="yellow">
 		<div class="mt-8 xs:mt-10">
-			<Cta class="bg-white" onClick={() => (signUpFormIsOpen = true)} text="Sign Up" />
+			<Cta
+				class="bg-white"
+				href="https://form.jotform.com/252393595086367"
+				target="_blank"
+				text="Sign Up"
+			/>
 		</div>
 	</Hero>
 
 	<section class="section-mt-lg">
 		<ContentSectionContainer variant="text">
-			<p class="leading-relaxed">
-				{hero.intro}
-			</p>
+			<div class="flex flex-col gap-4">
+				{#if typeof intro === 'string'}
+					<p class="leading-relaxed">
+						{intro}
+					</p>
+				{:else}
+					{#each intro as item}
+						<p class="leading-relaxed">
+							{item}
+						</p>
+					{/each}
+				{/if}
+			</div>
 		</ContentSectionContainer>
 	</section>
 
@@ -63,54 +80,23 @@
 		</ContentSectionContainer>
 	</section>
 
-	<section class="section-mt-xl">
-		<ContentSectionContainer variant="video">
-			<VideoWithModal
-				bind:isOpen={playIntro}
-				poster={cinematic_shot_of_blue_sky_with_sunlight_through_leaves}
-				posterAlt=""
-				title="Fresh — An Intro"
-				titlePlacement="top"
-				videoSrc={intro}
-			/>
-		</ContentSectionContainer>
-	</section>
-
 	<section class="section-mt-lg">
 		<ContentSectionContainer variant="text">
 			<h2 class="heading-sm">{expect.heading}</h2>
 
 			<div class="after-heading-sm-mt">
 				<div class="flex flex-col gap-8">
-					{#each expect.items as { title, text }}
+					{#each expect.items as { symbol, title, text }}
 						<div>
 							<h4 class="sub-heading-lg">
+								<span class="mr-1 text-3xl">
+									{symbol}
+								</span>
 								{title}
 							</h4>
 
 							<p class="mt-3 leading-relaxed">{text}</p>
 						</div>
-					{/each}
-				</div>
-			</div>
-		</ContentSectionContainer>
-	</section>
-
-	<section class="section-mt-lg">
-		<ContentSectionContainer variant="text">
-			<h2 class="heading-sm">{joinUs.heading}</h2>
-
-			<h4 class="sub-heading-lg after-heading-sm-mt">{joinUs.subheading}</h4>
-
-			<div class="after-sub-heading-lg-mt">
-				<div class="flex flex-col gap-3">
-					{#each joinUs.items as { text, symbol }}
-						<p class="flex items-center gap-3">
-							<span>{symbol}</span>
-							<span class="leading-[1.6em] text-black/90 decoration-bc-amber/30 underline-offset-2">
-								{text}
-							</span>
-						</p>
 					{/each}
 				</div>
 			</div>
@@ -125,27 +111,34 @@
 		<SignUpPromptSection onOpenSignUp={() => (signUpFormIsOpen = true)} />
 	</section>
 
-	<section class="section-mt-xl flex justify-center">
-		<div class="w-full">
-			<ContentSectionContainer variant="text">
-				<div>
-					<h2 class="heading-sm">{feedback.heading}</h2>
+	<section class="section-mt-lg">
+		<ContentSectionContainer variant="text">
+			<h2 class="heading-sm">{other.heading}</h2>
 
-					<h4 class="sub-heading-lg after-heading-sm-mt">{feedback.subheading}</h4>
-				</div>
-			</ContentSectionContainer>
+			<h3 class="sub-heading-lg">
+				{other.subheading}
+			</h3>
 
 			<div class="after-sub-heading-lg-mt">
-				<ContentSectionContainer variant="video">
-					<VideoWithModal
-						poster={participant_testimonial_poster}
-						posterAlt=""
-						videoSrc={participant_testimonial}
-						bind:isOpen={playTestimonial}
-					/>
-				</ContentSectionContainer>
+				<p class="text-right text-base! text-bc-logo-black/60 md:text-lg">
+					<span class="text-bc-amber/90 italic">Steering</span> poster
+				</p>
+				<enhanced:img
+					class="mt-1 cursor-pointer"
+					src={other.poster.src}
+					alt={other.poster.alt}
+					onclick={() => (posterIsOpen = true)}
+					onkeydown={(e) => {
+						if (e.key === 'Enter' || e.key === ' ') {
+							e.preventDefault();
+							posterIsOpen = true;
+						}
+					}}
+					tabindex="0"
+					role="button"
+				/>
 			</div>
-		</div>
+		</ContentSectionContainer>
 	</section>
 </div>
 
